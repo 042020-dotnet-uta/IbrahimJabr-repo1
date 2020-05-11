@@ -1,0 +1,44 @@
+HTML:
+
+1- What are some of the key new features in HTML5?
+
+Improved support for embedding graphics, audio, and video content via the new <canvas>, <audio>, and <video> tags.
+
+Extensions to the JavaScript API such as geolocation and drag-and-drop as well for storage and caching.
+
+Introduction of “web workers”.
+
+Several new semantic tags were also added to complement the structural logic of modern web applications. These include the <main>, <nav>, <article>, <section>, <header>, <footer>, and <aside> tags.
+
+New form controls, such as <calendar>, <date>, <time>, <email>, <url>, and <search>.
+
+
+2- Can a web page contain multiple <header> elements? What about <footer> elements?
+
+Yes to both. In fact, both the <header> and <footer> tags are designed to serve their respective purposes in relation to whatever their parent “section” may be. So not only can the page <body> contain a header and a footer,
+but so can every <article> and <section> element. In fact, a <header> should be present for all of these, although a <footer> is not always necessary.
+
+
+CSS:
+
+1- Explain the usage of "table-layout" property?
+
+The table-layout property defines the algorithm used to lay out table cells, rows, and columns.
+
+
+2-How does CSS actually work (under the hood of browser)?
+
+When a browser displays a document, it must combine the document's content with its style information. It processes the document in two stages:
+
+The browser converts HTML and CSS into the DOM (Document Object Model). The DOM represents the document in the computer's memory. It combines the document's content with its style.
+The browser displays the contents of the DOM.
+
+
+MVC:
+
+1- What is the recommended approach for ASP.NET MVC to globally intercept exceptions? What other functionality can be implemented with the approach?
+
+To intercept exceptions globally, the filter should be registered in Startup.ConfigureServices() as shown below:
+
+services.AddMvc(options => { options.Filters.Add(new ApiExceptionFilter()); });
+Authorization, custom action filters (sync and async), and action result transformation can be done with the same approach.
